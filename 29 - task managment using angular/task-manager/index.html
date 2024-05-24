@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body ng-app="taskManagerApp">
+    <div ng-controller="TaskController">
+        <h1>Task Manager</h1>
+        <!-- Task Form -->
+        <form name="taskForm" ng-submit="addTask()" novalidate>
+            <input type="text" name="taskName" ng-model="newTask.name" required placeholder="Task Name">
+            <span ng-show="taskForm.taskName.$touched && taskForm.taskName.$invalid">Task Name is required.</span>
+            <input type="text" name="taskDescription" ng-model="newTask.description" required placeholder="Task Description">
+            <span ng-show="taskForm.taskDescription.$touched && taskForm.taskDescription.$invalid">Task Description is required.</span>
+            <button type="submit">Add Task</button>
+        </form>
+        <!-- Task List -->
+        <ul>
+            <li ng-repeat="task in tasks">
+                {{task.name}}: {{task.description}}
+                <button ng-click="editTask(task)">Edit</button>
+                <button ng-click="deleteTask(task)">Delete</button>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

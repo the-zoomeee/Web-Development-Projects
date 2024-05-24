@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="financeTrackerApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Finance Tracker</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1, h2 { text-align: center; }
+        form { margin-bottom: 20px; }
+        form label { display: block; margin-top: 10px; }
+        form input, form select, form button { width: 100%; padding: 10px; margin-top: 5px; }
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 10px; border-bottom: 1px solid #ddd; }
+        li:nth-child(odd) { background: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <div class="container" ng-controller="MainController">
+        <h1>Personal Finance Tracker</h1>
+        <div>
+            <h2>Add Transaction</h2>
+            <form ng-submit="addTransaction()">
+                <label>Description:</label>
+                <input type="text" ng-model="newTransaction.description" required>
+                <label>Amount:</label>
+                <input type="number" ng-model="newTransaction.amount" required>
+                <label>Type:</label>
+                <select ng-model="newTransaction.type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+        <div>
+            <h2>Transactions</h2>
+            <ul>
+                <li ng-repeat="transaction in transactions">
+                    {{transaction.description}} - {{transaction.amount | currency}} ({{transaction.type}})
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2>Balance</h2>
+            <p>Total Income: {{getTotalIncome() | currency}}</p>
+            <p>Total Expenses: {{getTotalExpenses() | currency}}</p>
+            <p>Net Balance: {{getNetBalance() | currency}}</p>
+        </div>
+    </div>
+</body>
+</html>

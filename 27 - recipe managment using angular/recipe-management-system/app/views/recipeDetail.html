@@ -1,0 +1,15 @@
+<div>
+  <h1>{{recipe.name}}</h1>
+  <form ng-submit="saveRecipe()">
+    <label>Name:</label>
+    <input type="text" ng-model="recipe.name" required/>
+    <br/>
+    <label>Ingredients:</label>
+    <textarea ng-model="recipe.ingredients" required></textarea>
+    <br/>
+    <label>Instructions:</label>
+    <textarea ng-model="recipe.instructions" required></textarea>
+    <br/>
+    <button type="submit">Save</button>
+  </form>
+</div>

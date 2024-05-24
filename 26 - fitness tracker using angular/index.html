@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FitnessTrackerApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Fitness Tracker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="MainController">
+    <div>
+        <h1>Fitness Tracker</h1>
+        <form ng-submit="addWorkout(newWorkout)">
+            <label>Workout Name:</label>
+            <input type="text" ng-model="newWorkout.name" required>
+            <label>Calories Burned:</label>
+            <input type="number" ng-model="newWorkout.calories" required>
+            <label>Steps:</label>
+            <input type="number" ng-model="newWorkout.steps" required>
+            <button type="submit">Add Workout</button>
+        </form>
+        <h2>Workouts:</h2>
+        <ul>
+            <li ng-repeat="workout in trackerData.workouts">
+                {{ workout.name }} - {{ workout.calories }} calories - {{ workout.steps }} steps
+            </li>
+        </ul>
+        <h2>Total Steps: {{ trackerData.steps }}</h2>
+        <h2>Total Calories Burned: {{ trackerData.calories }}</h2>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

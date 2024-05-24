@@ -1,0 +1,10 @@
+<div>
+  <h1>Recipes</h1>
+  <ul>
+    <li ng-repeat="recipe in recipes">
+      <a ng-href="#!/recipes/{{recipe.id}}">{{recipe.name}}</a>
+      <button ng-click="deleteRecipe(recipe.id)">Delete</button>
+    </li>
+  </ul>
+  <a ng-href="#!/recipes/new">Add New Recipe</a>
+</div>

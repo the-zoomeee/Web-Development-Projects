@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="recipeApp">
+<head>
+  <title>Recipe Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+    button[type="submit"],
+    button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover,
+    button:hover {
+      background-color: #45a049;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../node_modules/angular-route/angular-route.min.js"></script>
+  <script src="app.js"></script>
+  <script src="recipeController.js"></script>
+  <script src="recipeService.js"></script>
+</head>
+<body>
+  <div ng-view class="container"></div>
+</body>
+</html>

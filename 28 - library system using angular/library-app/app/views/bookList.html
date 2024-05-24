@@ -1,0 +1,15 @@
+<!-- app/views/bookList.html -->
+<div>
+    <h1>Book List</h1>
+    <ul>
+        <li ng-repeat="book in books">
+            <a href="#!/books/{{book.id}}">{{book.title}}</a>
+            <button ng-click="deleteBook(book.id)">Delete</button>
+        </li>
+    </ul>
+    <form ng-submit="addBook()">
+        <input type="text" ng-model="book.title" placeholder="Title" required>
+        <input type="text" ng-model="book.author" placeholder="Author" required>
+        <button type="submit">Add Book</button>
+    </form>
+</div>
