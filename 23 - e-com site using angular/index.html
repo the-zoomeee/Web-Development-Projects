@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="ecommerceApp">
+
+<head>
+    <title>E-commerce App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body ng-controller="ProductController">
+    <div class="product-container">
+        <div class="product-list">
+            <h1>Product Listing</h1>
+            <ul>
+                <li ng-repeat="product in products">
+                    {{ product.name }} - ${{ product.price }}
+                    <button class="add-to-cart" ng-click="addToCart(product)">Add to Cart</button>
+                    <button class="view-details" ng-click="showDetails(product)">View Details</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="product-details" ng-show="selectedProduct">
+            <h2>Product Details</h2>
+            <p>Name: {{ selectedProduct.name }}</p>
+            <p>Price: ${{ selectedProduct.price }}</p>
+            <button class="add-to-cart" ng-click="addToCart(selectedProduct)">Add to Cart</button>
+            <button class="close-details" ng-click="hideDetails()">Close</button>
+        </div>
+
+        <div class="cart-container">
+            <h2>Shopping Cart</h2>
+            <ul>
+                <li ng-repeat="item in cart">
+                    {{ item.product.name }} - Quantity: {{ item.quantity }} - Total: ${{ item.total }}
+                </li>
+            </ul>
+            <p>Total Price: ${{ getTotalPrice() }}</p>
+            <button class="checkout-button" ng-click="checkout()">Checkout</button>
+        </div>
+
+        <div class="checkout-container" ng-show="checkoutComplete">
+            <h2 class="checkout-complete">Checkout Complete</h2>
+            <p>Thank you for shopping with us!</p>
+        </div>
+    </div>
+</body>
+
+</html>

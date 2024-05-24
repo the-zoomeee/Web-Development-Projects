@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Create New Post</h1>
+    <form ng-submit="createPost()">
+        <label>Title:</label>
+        <input type="text" ng-model="newPost.title" required>
+
+        <label>Content:</label>
+        <textarea ng-model="newPost.content" required></textarea>
+
+        <button type="submit">Create Post</button>
+    </form>
+</div>

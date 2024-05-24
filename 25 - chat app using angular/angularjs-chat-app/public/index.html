@@ -1,0 +1,28 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en" ng-app="chatApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Chat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+    <style>
+        #chat-window {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body ng-controller="ChatController">
+    <div id="chat-window">
+        <div ng-repeat="message in messages">
+            <strong>{{ message.username }}</strong>: {{ message.text }}
+        </div>
+    </div>
+    <input type="text" ng-model="newMessage" ng-keyup="$event.keyCode == 13 && sendMessage()" placeholder="Type your message here...">
+    <button ng-click="sendMessage()">Send</button>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div class="forecast">
+    <h2>Weather Forecast for {{ $ctrl.city }}</h2>
+    <div ng-if="$ctrl.weatherData">
+        <p>Temperature: {{ $ctrl.weatherData.main.temp }} °C</p>
+        <p>Weather: {{ $ctrl.weatherData.weather[0].description }}</p>
+        <p>Humidity: {{ $ctrl.weatherData.main.humidity }}%</p>
+        <p>Wind Speed: {{ $ctrl.weatherData.wind.speed }} m/s</p>
+    </div>
+    <div ng-if="!$ctrl.weatherData">
+        <p>Loading weather data...</p>
+    </div>
+</div>
