@@ -1,0 +1,44 @@
+body {
+    background-color: #232323;
+    color: white;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    background-color: steelblue;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.square {
+    width: 30%;
+    background: purple;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#reset {
+    padding: 10px 20px;
+    background: steelblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+#message {
+    height: 20px;
+}

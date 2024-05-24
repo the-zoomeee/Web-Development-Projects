@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Card</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    width: 300px;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-color: #ccc; /* Placeholder color */
+  }
+
+  .profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .profile-info {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .profile-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 5px;
+  }
+
+  .profile-links a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="profile-pic" src="https://pbs.twimg.com/media/DVxC_X_W0AA6CKI.png" alt="Profile Picture">
+    <div class="profile-name">Tony stark</div>
+    <div class="profile-info">Weapon Developer</div>
+    <div class="profile-info">Location: New York, USA</div>
+    <div class="profile-links">
+      <a href="#">Website</a>
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+</body>
+</html>
