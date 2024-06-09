@@ -22,6 +22,7 @@ Advance Web Technology solutions
 18. Create a personal portfolio webpage using HTML and CSS.
 19. Design a restaurant menu page with HTML and CSS.
 20. Create a landing page for a fictional company using HTML and CSS.
+    
 37). Create a web page for hostel application using different HTML tags and apply CSS to it. create a form and add validation to it using javascript.
 a38. Create a web page for Hospital management using different HTML tags and apply CSS to it. create a form and add validation to it using javascript.
 a39. Create a web page for Student Registration System for an institute using different HTML tags and apply CSS to it, create a form and add validation to it using JavaScript.
