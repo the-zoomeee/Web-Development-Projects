@@ -1,9 +1,9 @@
 # Web Development Projects
 <ol>
->  <li>HTML and CSS projects</li>
->  <li>HTML and JavaScript projects</li>
->  <li>Angular.Js projects</li>
->  <li>ReactJs projects</li>
+  <li>HTML and CSS projects</li>
+  <li>HTML and JavaScript projects</li>
+  <li>Angular.Js projects</li>
+  <li>ReactJs projects</li>
 </ol>
 
 ## Questions --
