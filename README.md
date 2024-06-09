@@ -40,5 +40,3 @@ Advance Web Technology solutions
 34. Create a blog platform using React with post creation, editing, and deletion features.
 35. Develop a task management application using React with the ability to add, edit, and delete tasks.
 36. Create an online store using React with product listing, shopping cart, and checkout features.
-37. Create a custom server using the HTTP module in Node.js.
-38. Develop a file upload application using Node.js and Express.
