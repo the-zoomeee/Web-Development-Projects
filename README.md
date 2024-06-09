@@ -42,20 +42,24 @@ Advance Web Technology solutions
       <li>Display the total number of correct answers after submitting the quiz.</li>
       <li>Include a "Submit" button to check the answers</li>
     </ul>
+
 44). Create a Survey Form using HTML, CSS, and JavaScript. 
     <ul>The form should have the following features:
       <li>Display a series of questions with multiple-choice, rating, and open-ended responses. Allow users to select or input their responses.</li>    
       <li>Include a "Submit" button to submit the survey.</li>       
       <li>Display a thank you message and optionally summarize the responses.</li>
-    </ul>        
+    </ul>
+        
 45). Design a True or False Quiz using HTML, CSS, and JavaScript.
     <ul>The quiz should have the following features:
       <li>Display a series of true or false questions.</li>
       <li>Allow users to select either true or false for each question.</li>
       <li>Include a "Submit" button to check the answers</li>
       <li>Display the total number of correct answers after submitting the quiz.</li>
-    </ul>            
+    </ul>   
+         
 51). Create a To-do Application using JavaScript. Create add and delete feature.
+
 ## AngularJS Projects
 21. Create an AngularJS application for a movie database with search functionality.
 22. Design a weather forecast application using AngularJS and an external API.
@@ -67,12 +71,19 @@ Advance Web Technology solutions
 28. Create a single-page application using AngularJS to manage a library system.
 29. Develop a task management system using AngularJS with form validation.
 30. Develop a personal finance tracker using AngularJS.
-46. Create a web page for Grocery application using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
-47. Create a web page for Tourism Application using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
-48. Create a web page for a Complaint Management Application using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
-49. Create a web page for Cake Shop using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
-50. Create a To-do Application using AngularJS. Create add and delete feature
-52. Create a web page for a Doctor's Appointment Application using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
+
+46). Create a web page for Grocery application using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
+
+47). Create a web page for Tourism Application using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
+
+48). Create a web page for a Complaint Management Application using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
+
+49). Create a web page for Cake Shop using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
+
+50). Create a To-do Application using AngularJS. Create add and delete feature
+
+52). Create a web page for a Doctor's Appointment Application using different HTML tags and apply CSS to it, create a form and add validation to it using AngularJS.
+
 ## React Projects
 31. Create a student management system using React with registration, login, contact, and about pages.
 32. Develop a quiz application using React that displays multiple-choice questions and calculates scores.
