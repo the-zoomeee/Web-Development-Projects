@@ -23,11 +23,11 @@ Advance Web Technology solutions
 19. Design a restaurant menu page with HTML and CSS.
 20. Create a landing page for a fictional company using HTML and CSS.
     
-37). Create a web page for hostel application using different HTML tags and apply CSS to it. create a form and add validation to it using javascript.
-a38. Create a web page for Hospital management using different HTML tags and apply CSS to it. create a form and add validation to it using javascript.
-a39. Create a web page for Student Registration System for an institute using different HTML tags and apply CSS to it, create a form and add validation to it using JavaScript.
-a40. Create an HTML Script for a Car Service Center utilizing HTML tags and CSS features: Enhance content with numerous car workshop photographs and car accessories, as well as details on various car servicing packages. Perform JavaScript Validation.
-a41. Create an HTML Script for a Flower Shop utilizing HTML tags and CSS features: Enhance content and output with flowers/bouquet photographs etc. as well as details on various car bouquet & combos. Perform JavaScript Validation.         
+37. Create a web page for hostel application using different HTML tags and apply CSS to it. create a form and add validation to it using javascript.
+38. Create a web page for Hospital management using different HTML tags and apply CSS to it. create a form and add validation to it using javascript.
+39. Create a web page for Student Registration System for an institute using different HTML tags and apply CSS to it, create a form and add validation to it using JavaScript.
+40. Create an HTML Script for a Car Service Center utilizing HTML tags and CSS features: Enhance content with numerous car workshop photographs and car accessories, as well as details on various car servicing packages. Perform JavaScript Validation.
+41. Create an HTML Script for a Flower Shop utilizing HTML tags and CSS features: Enhance content and output with flowers/bouquet photographs etc. as well as details on various car bouquet & combos. Perform JavaScript Validation.         
 41. Design an e-commerce product page with HTML and CSS, create a form and add validation to it using JavaScript.
 43. Create an interactive quiz application using HTML, CSS, and JavaScript. 
     <ul>The quiz should have the following features: 
