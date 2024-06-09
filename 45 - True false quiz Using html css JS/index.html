@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>True or False Quiz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .question {
+        margin-bottom: 20px;
+    }
+    .options label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .result {
+        text-align: center;
+        margin-top: 20px;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>True or False Quiz</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. The Earth is flat.</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="true"> True</label>
+                <label><input type="radio" name="q1" value="false"> False</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>2. Water boils at 100 degrees Celsius.</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="true"> True</label>
+                <label><input type="radio" name="q2" value="false"> False</label>
+            </div>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    const quizForm = document.getElementById('quizForm');
+    const resultDiv = document.getElementById('result');
+
+    quizForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        showResult();
+    });
+
+    function showResult() {
+        let correctAnswers = 0;
+
+        const answers = {
+            q1: 'false',
+            q2: 'true'
+        };
+
+        for (let i = 1; i <= Object.keys(answers).length; i++) {
+            const questionName = 'q' + i;
+            const selectedOption = document.querySelector('input[name="' + questionName + '"]:checked');
+            if (selectedOption) {
+                if (selectedOption.value === answers[questionName]) {
+                    correctAnswers++;
+                }
+            }
+        }
+
+        resultDiv.textContent = 'You got ' + correctAnswers + ' out of ' + Object.keys(answers).length + ' correct!';
+        resultDiv.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to Our Flower Shop</h1>
+    <div class="gallery">
+        <img src="bouquet1.jpg" alt="Bouquet 1">
+        <img src="bouquet2.jpg" alt="Bouquet 2">
+        <img src="flowers.jpg" alt="Flowers">
+    </div>
+    <h2>Bouquet Combos</h2>
+    <div class="combos">
+        <div class="combo">
+            <h3>Rose Bouquet</h3>
+            <p>A beautiful bouquet of red roses.</p>
+        </div>
+        <div class="combo">
+            <h3>Spring Mix</h3>
+            <p>A vibrant mix of spring flowers.</p>
+        </div>
+        <div class="combo">
+            <h3>Sunflower Delight</h3>
+            <p>A bright and cheerful sunflower bouquet.</p>
+        </div>
+    </div>
+    <h2>Order a Bouquet</h2>
+    <form id="flowerForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="combo">Bouquet Combo:</label>
+        <select id="combo" name="combo" required>
+            <option value="rose">Rose Bouquet</option>
+            <option value="spring">Spring Mix</option>
+            <option value="sunflower">Sunflower Delight</option>
+        </select>
+        <br>
+        <input type="submit" value="Order Now">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

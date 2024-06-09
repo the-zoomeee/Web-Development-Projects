@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cakeShopApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="FormController as formCtrl">
+    <header>
+        <h1>Welcome to Cake Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#cakes">Our Cakes</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to our Cake Shop! We offer a wide variety of delicious cakes for all occasions.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a family-owned business with over 20 years of experience in baking the best cakes in town.</p>
+        </section>
+
+        <section id="cakes">
+            <h2>Our Cakes</h2>
+            <p>Check out our selection of cakes:</p>
+            <!-- List of cakes goes here -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form name="contactForm" ng-submit="formCtrl.submitForm(contactForm.$valid)" novalidate>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" ng-model="formCtrl.user.name" required>
+                    <span ng-show="contactForm.name.$touched && contactForm.name.$invalid">Name is required.</span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" ng-model="formCtrl.user.email" required>
+                    <span ng-show="contactForm.email.$touched && contactForm.email.$invalid">Valid email is required.</span>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" ng-model="formCtrl.user.message" required></textarea>
+                    <span ng-show="contactForm.message.$touched && contactForm.message.$invalid">Message is required.</span>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cake Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

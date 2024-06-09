@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="groceryApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="GroceryController">
+    <header>
+        <h1>Grocery Application</h1>
+    </header>
+
+    <section class="form-section">
+        <h2>Add Grocery Item</h2>
+        <form name="groceryForm" ng-submit="addGroceryItem()" novalidate>
+            <div>
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" name="itemName" ng-model="newItem.name" required>
+                <span ng-show="groceryForm.itemName.$touched && groceryForm.itemName.$invalid">Item name is required.</span>
+            </div>
+
+            <div>
+                <label for="itemQuantity">Quantity:</label>
+                <input type="number" id="itemQuantity" name="itemQuantity" ng-model="newItem.quantity" min="1" required>
+                <span ng-show="groceryForm.itemQuantity.$touched && groceryForm.itemQuantity.$invalid">Quantity is required and must be at least 1.</span>
+            </div>
+
+            <button type="submit" ng-disabled="groceryForm.$invalid">Add Item</button>
+        </form>
+    </section>
+
+    <section class="list-section">
+        <h2>Grocery List</h2>
+        <ul>
+            <li ng-repeat="item in groceryList">{{ item.name }} - {{ item.quantity }}</li>
+        </ul>
+    </section>
+</body>
+</html>

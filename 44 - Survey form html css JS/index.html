@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .question {
+        margin-bottom: 20px;
+    }
+    .options label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .thank-you {
+        text-align: center;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Survey Form</h1>
+    <form id="surveyForm">
+        <div class="question">
+            <p>1. What is your favorite color?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="Red"> Red</label>
+                <label><input type="radio" name="q1" value="Blue"> Blue</label>
+                <label><input type="radio" name="q1" value="Green"> Green</label>
+                <label><input type="radio" name="q1" value="Other"> Other</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>2. How would you rate our service?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="1"> 1</label>
+                <label><input type="radio" name="q2" value="2"> 2</label>
+                <label><input type="radio" name="q2" value="3"> 3</label>
+                <label><input type="radio" name="q2" value="4"> 4</label>
+                <label><input type="radio" name="q2" value="5"> 5</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>3. What suggestions do you have for improvement?</p>
+            <textarea name="q3" rows="4" cols="50"></textarea>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <div class="thank-you" id="thankYouMessage">
+        <h2>Thank you for completing the survey!</h2>
+        <div id="summary"></div>
+    </div>
+</div>
+
+<script>
+    const surveyForm = document.getElementById('surveyForm');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+    const summaryDiv = document.getElementById('summary');
+
+    surveyForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        showThankYouMessage();
+        showSummary();
+    });
+
+    function showThankYouMessage() {
+        surveyForm.style.display = 'none';
+        thankYouMessage.style.display = 'block';
+    }
+
+    function showSummary() {
+        const responses = {
+            q1: document.querySelector('input[name="q1"]:checked').value,
+            q2: document.querySelector('input[name="q2"]:checked').value,
+            q3: document.querySelector('textarea[name="q3"]').value
+        };
+
+        summaryDiv.innerHTML = '<h3>Summary of Responses:</h3>';
+        for (const key in responses) {
+            if (responses.hasOwnProperty(key)) {
+                summaryDiv.innerHTML += `<p><strong>${key}:</strong> ${responses[key]}</p>`;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

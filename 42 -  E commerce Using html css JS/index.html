@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Page</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    h1 {
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        margin-bottom: 5px;
+    }
+    input[type="text"], input[type="email"], input[type="submit"] {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    input[type="submit"] {
+        cursor: pointer;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+    }
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    .error {
+        color: red;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Product Name</h1>
+    <form id="orderForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span class="error" id="nameError"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span>
+
+        <input type="submit" value="Place Order">
+    </form>
+</div>
+
+<script>
+    const form = document.getElementById('orderForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            // Submit the form
+            alert('Form submitted successfully!');
+            form.reset();
+        }
+    });
+
+    function validateForm() {
+        let isValid = true;
+        const nameValue = nameInput.value.trim();
+        const emailValue = emailInput.value.trim();
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+
+        // Name validation
+        if (nameValue === '') {
+            nameError.textContent = 'Name is required';
+            isValid = false;
+        } else {
+            nameError.textContent = '';
+        }
+
+        // Email validation
+        if (emailValue === '') {
+            emailError.textContent = 'Email is required';
+            isValid = false;
+        } else if (!isValidEmail(emailValue)) {
+            emailError.textContent = 'Invalid email format';
+            isValid = false;
+        } else {
+            emailError.textContent = '';
+        }
+
+        return isValid;
+    }
+
+    function isValidEmail(email) {
+        // Very basic email validation
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+</script>
+
+</body>
+</html>

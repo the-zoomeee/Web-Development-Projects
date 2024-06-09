@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body ng-app="tourismApp" ng-controller="FormController">
+
+    <header>
+        <h1>Explore the World</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Your Next Adventure</h2>
+            <p>Discover amazing places at exclusive deals!</p>
+        </section>
+
+        <section id="destinations">
+            <h2>Popular Destinations</h2>
+            <div class="destination">
+                <h3>Paris</h3>
+                <p>The city of lights and love, with iconic landmarks and romantic ambiance.</p>
+            </div>
+            <div class="destination">
+                <h3>Bali</h3>
+                <p>A tropical paradise with beautiful beaches, vibrant culture, and rich traditions.</p>
+            </div>
+            <div class="destination">
+                <h3>New York</h3>
+                <p>The city that never sleeps, full of excitement, culture, and endless possibilities.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form name="contactForm" ng-submit="submitForm()" novalidate>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" ng-model="formData.name" required>
+                    <span ng-show="contactForm.name.$touched && contactForm.name.$invalid">Name is required.</span>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" ng-model="formData.email" required>
+                    <span ng-show="contactForm.email.$touched && contactForm.email.$invalid">Valid email is required.</span>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" ng-model="formData.message" required></textarea>
+                    <span ng-show="contactForm.message.$touched && contactForm.message.$invalid">Message is required.</span>
+                </div>
+                <button type="submit" ng-disabled="contactForm.$invalid">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Explore the World. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
